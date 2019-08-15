@@ -8,7 +8,7 @@ pipeline {
         
     stage('Code checkout') {
       steps {
-        git 'https://github.com/gustavoapolinario/node-todo-frontend'
+        git 'https://github.com/vasurampalli/node-todo-frontend'
         sh 'node -v'
         sh 'npm -v'
       }
