@@ -24,15 +24,18 @@ pipeline {
       steps {
          sh 'npm start'
       }
+    }  
     
     stage('Build') {
       steps {
          sh 'npm run build'
       }
+    }  
     stage('Test') {
       steps {
          sh 'npm test'
       }
+    }  
     stage('deploy') {
       steps {
          sh 'npm deploy'
