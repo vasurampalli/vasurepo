@@ -6,7 +6,7 @@ pipeline {
     
   stages {
         
-    stage('Cloning Git') {
+    stage('Code checkout') {
       steps {
         git 'https://github.com/gustavoapolinario/node-todo-frontend'
         sh 'node -v'
@@ -24,6 +24,14 @@ pipeline {
       steps {
          sh 'npm test'
       }
+    stage('Build') {
+      steps {
+         sh 'npm build'
+      }
+    stage('deploy') {
+      steps {
+         sh 'npm deploy'
+      }  
     }      
   }
 }
