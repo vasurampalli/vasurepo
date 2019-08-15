@@ -18,21 +18,11 @@ pipeline {
       steps {
         sh 'npm install'
       }
-    }
-    stage('Build') {
-      steps {
-         sh 'npm build'
-      }
-    }  
+    } 
     stage('Test') {
       steps {
          sh 'npm test'
       }
-    }  
-    stage('deploy') {
-      steps {
-         sh 'npm deploy'
-      }  
     }      
   }
 }
